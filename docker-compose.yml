@@ -1,0 +1,10 @@
+version: '1'
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/go/src/helloworld
+    ports:
+      - "5000:5000"
+    command: reflex -r '\.go$$' -s -- sh -c 'go build && ./helloworld'
+    stop_signal: SIGKILL

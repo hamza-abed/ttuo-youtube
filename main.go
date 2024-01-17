@@ -10,7 +10,7 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.HandleFunc("/ping", pingHandler)
-	port := 8080
+	port := 5000
 	err := http.ListenAndServe(fmt.Sprintf(":%d", port), mux)
 	if err != nil {
 		fmt.Println(err)
