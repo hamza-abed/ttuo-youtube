@@ -21,7 +21,7 @@ func main() {
 func pingHandler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Content-type", "application/json")
-	response := map[string]string{"messagclear
+	response := map[string]string{"message": "pong"}
 
 	json.NewEncoder(w).Encode(response)
 }
